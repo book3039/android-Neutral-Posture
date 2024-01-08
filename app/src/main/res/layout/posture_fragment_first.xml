@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".posture.PostureLearnFirstFragment">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/common_activity_base_toolbar" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <ImageView
+        android:id="@+id/image__posture_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_posture_good"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/guidline"/>
+
+    <ImageView
+        android:id="@+id/image__posture_bad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_posture_bad1"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/guidline"/>
+
+    <ImageView
+        android:id="@+id/image__posture_bad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_posture_bad2"
+        app:layout_constraintHorizontal_bias="0.3"
+        android:visibility="invisible"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/guidline"/>
+
+    <ImageView
+        android:id="@+id/image__posture_bad3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_posture_bad3"
+        app:layout_constraintHorizontal_bias="0.72"
+        android:visibility="invisible"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/guidline"/>
+
+    <ImageView
+        android:id="@+id/image__posture_bad4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image_posture_bad4"
+        app:layout_constraintHorizontal_bias="0.92"
+        android:visibility="invisible"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/guidline"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/image_blank"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/text_goodposture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_one_pretty_night"
+            android:layout_marginStart="10dp"
+            android:text="@string/good_posture_anim1"
+            android:textColor="@color/good_posture"
+            android:textSize="50sp"
+            android:textStyle="bold"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/text_goodposture2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_one_pretty_night"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="8dp"
+            android:text="@string/good_posture_anim2"
+            android:textColor="@color/black"
+
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/text_goodposture"
+            app:layout_constraintStart_toEndOf="@+id/text_goodposture" />
+
+        <TextView
+            android:id="@+id/text_badposture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_one_pretty_night"
+            android:layout_marginStart="10dp"
+
+            android:text="@string/good_posture_anim3"
+            android:textColor="@color/bad_posture"
+            android:textSize="50sp"
+            android:textStyle="bold"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <TextView
+            android:id="@+id/text_badposture2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_one_pretty_night"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="8dp"
+            android:text="@string/good_posture_anim4"
+            android:textColor="@color/black"
+
+            android:textSize="30sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/text_badposture"
+            app:layout_constraintStart_toEndOf="@+id/text_badposture" />
+
+        <TextView
+            android:id="@+id/text_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_one_pretty_night"
+            android:layout_marginBottom="10dp"
+            android:text="@string/next_button"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/posture_nav_graph"
+    app:startDestination="@id/postureHomeFragment">
+    <fragment
+        android:id="@+id/postureHomeFragment"
+        android:name="com.example.knou_cih.posture.PostureHomeFragment"
+        android:label="PostureHomeFragment" >
+        <action
+            android:id="@+id/action_postureHomeFragment_to_postureCaptureFirstFragment"
+            app:destination="@id/postureCaptureFirstFragment" />
+        <action
+            android:id="@+id/action_postureHomeFragment_to_postureRootFragment"
+            app:destination="@id/postureRootFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postureRootFragment"
+        android:name="com.example.knou_cih.posture.PostureLearnRootFragment"
+        android:label="PostureRootFragment" >
+        <action
+            android:id="@+id/action_postureRootFragment_to_postureFirstFragment"
+            app:destination="@id/postureFirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postureFirstFragment"
+        android:name="com.example.knou_cih.posture.PostureLearnFirstFragment"
+        android:label="posture_fragment_first"
+        tools:layout="@layout/posture_fragment_first" >
+        <action
+            android:id="@+id/action_postureFirstFragment_to_postureCaptureSecondFragment"
+            app:destination="@id/postureCaptureSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postureCaptureFirstFragment"
+        android:name="com.example.knou_cih.posture.PostureCaptureFirstFragment"
+        android:label="posture_fragment_capture_first"
+        tools:layout="@layout/posture_fragment_capture_first" />
+    <fragment
+        android:id="@+id/postureCaptureSecondFragment"
+        android:name="com.example.knou_cih.posture.PostureCaptureSecondFragment"
+        android:label="PostureCaptureSecondFragment" >
+        <action
+            android:id="@+id/action_postureCaptureSecondFragment_to_postureThirdFragment"
+            app:destination="@id/postureThirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postureThirdFragment"
+        android:name="com.example.knou_cih.posture.PostureLearnThirdFragment"
+        android:label="posture_fragment_third"
+        tools:layout="@layout/posture_fragment_third" >
+        <action
+            android:id="@+id/action_postureThirdFragment_to_postureFourthFragment"
+            app:destination="@id/postureFourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postureFourthFragment"
+        android:name="com.example.knou_cih.posture.PostureLearnFourthFragment"
+        android:label="posture_fragment_fourth"
+        tools:layout="@layout/posture_fragment_fourth" >
+        <action
+            android:id="@+id/action_postureFourthFragment_to_postureFifthFragment"
+            app:destination="@id/postureFifthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postureFifthFragment"
+        android:name="com.example.knou_cih.posture.PostureLearnFifthFragment"
+        android:label="posture_fragment_fifth"
+        tools:layout="@layout/posture_fragment_fifth" >
+        <action
+            android:id="@+id/action_postureFifthFragment_to_postureSixthFragment"
+            app:destination="@id/postureSixthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postureSixthFragment"
+        android:name="com.example.knou_cih.posture.PostureLearnSixthFragment"
+        android:label="posture_fragment_sixth"
+        tools:layout="@layout/posture_fragment_sixth" >
+        <action
+            android:id="@+id/action_postureSixthFragment_to_postureRecyclerView"
+            app:destination="@id/postureRecyclerView" />
+    </fragment>
+    <fragment
+        android:id="@+id/postureRecyclerView"
+        android:name="com.example.knou_cih.posture.PostureRecyclerViewFragment"
+        android:label="posture_recycler_view"
+        tools:layout="@layout/posture_fragment_recycler_view" >
+        <action
+            android:id="@+id/action_postureRecyclerView_to_postureCaptureFirstFragment"
+            app:destination="@id/postureCaptureFirstFragment" />
+    </fragment>
+</navigation>

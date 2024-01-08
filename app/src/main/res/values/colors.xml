@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#B2FF1F1F</color>
+    <color name="green">#B200FF7B</color>
+    <color name="translucent_white">#CCFFFFFF</color>
+    <color name="translucent_black">#99000000</color>
+    <color name="translucent">#3F000000</color>
+    <color name="translucent_2">#5F000000</color>
+    <color name="translucent_sheet">#804B4B4B</color>
+    <color name="btn_focused">#66FFFFFF</color>
+    <color name="good_posture">#03A696</color>
+    <color name="bad_posture">#F22E76</color>
+
+</resources>

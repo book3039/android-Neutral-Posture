@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_activity_base_toolbar"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66"/>
+
+    <ImageButton
+        android:id="@+id/prev_directory"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_exercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal_down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintVertical_bias="0.55"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_one_pretty_night"
+        android:text="@string/prev_menu"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@id/prev_directory"
+        app:layout_constraintEnd_toEndOf="@id/prev_directory"
+        app:layout_constraintTop_toBottomOf="@+id/prev_directory" />
+
+
+    <ImageButton
+        android:id="@+id/exercise_neck"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_neck_exercise"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/text_exercise_neck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_one_pretty_night"
+        android:text="@string/correct_neck"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_neck" />
+
+    <ImageButton
+        android:id="@+id/exercise_spine"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_spine_exercise"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_horizontal_up"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/text_exercise_spine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_one_pretty_night"
+        android:text="@string/correct_spine"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_spine" />
+
+    <ImageButton
+        android:id="@+id/exercise_pelvis"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_pelvis_exercise"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal_up"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <TextView
+        android:id="@+id/text_exercise_pelvis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_one_pretty_night"
+        android:text="@string/correct_pelvis"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_pelvis" />
+
+    <ImageButton
+        android:id="@+id/exercise_neck_root"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        android:src="@drawable/icon_neck_exercise"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="@id/prev_directory"
+        app:layout_constraintEnd_toEndOf="@id/prev_directory"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_up"/>
+
+    <ImageButton
+        android:id="@+id/exercise_spine_root"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+
+        android:src="@drawable/icon_spine_exercise"
+        app:layout_constraintStart_toStartOf="@id/prev_directory"
+        app:layout_constraintEnd_toEndOf="@id/prev_directory"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_up"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_down"/>
+
+    <ImageButton
+        android:id="@+id/exercise_pelvis_root"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_pelvis_exercise"
+        android:visibility="invisible"
+
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintStart_toStartOf="@id/prev_directory"
+        app:layout_constraintEnd_toEndOf="@id/prev_directory"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_down"
+        app:layout_constraintBottom_toTopOf="@+id/prev_directory"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recyclerview_neck_layout"
+        android:layout_width="280dp"
+        android:layout_height="166dp"
+        android:background="@color/translucent"
+        android:visibility="invisible"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prev_directory"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_neck_item"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recyclerview_spine_layout"
+        android:layout_width="280dp"
+        android:layout_height="166dp"
+        android:background="@color/translucent"
+        android:visibility="invisible"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prev_directory"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_up"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizontal_down">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_spine_item"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/recyclerview_pelvis_layout"
+    android:layout_width="280dp"
+    android:layout_height="166dp"
+    android:background="@color/translucent"
+    android:visibility="invisible"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="12dp"
+        app:layout_constraintVertical_bias="0.64"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/prev_directory"
+    app:layout_constraintTop_toTopOf="@id/guideline_horizontal_up"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerview_pelvis_item"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
